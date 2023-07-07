@@ -22,6 +22,14 @@ body {
     margin: 0 auto;
 }
 
+.game-header {
+    font-size: 5rem;
+    color: #659ec2;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
 .game-box {
     color: #fff;
     min-width: 50vw;
