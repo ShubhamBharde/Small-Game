@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Vina Sans', cursive;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 5%;
+    background-color: rgb(55, 41, 41);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.game-box {
+    color: #fff;
+    min-width: 50vw;
+    max-width: 80vw;
+    min-height: 50vh;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    align-items: center;
+    /* align-content: center; */
+    justify-content: center;
+    border: 5px solid #2c3a8e;
+    padding: 5%;
+    gap: 2.5rem;
+}
+
+.game-box p {
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+
+.game-box .btns {
+    display: inline-flex;
+    gap: 2rem;
+}
+
+.btn {
+    display: inline-flex;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-family: 'Vina Sans', cursive;
+    border: none;
+}
+
+#start-btn {
+    background-color: green;
+    color: #fff;
+}
+
+#stop-btn {
+    background-color: #8e2c2c;
+    color: #fff;
+}
+
+
+/* breakpoints */
+@media only screen and (max-width: 900px) {
+    html {
+        font-size: 14.5px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    html {
+        font-size: 11px;
+    }
+}
