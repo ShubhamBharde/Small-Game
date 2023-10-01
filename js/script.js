@@ -4,25 +4,29 @@ const showNumber = document.querySelector('#show-number');
 
 let stopNumber;
 let num;
+let startFlag = 1;
 
 const displayNumber = () => {
+    if(startFlag){
     showNumber.innerHTML = 'Game is loading.. '; // html logic
 
+    num = 0;
     setTimeout(() => {
-        num = 0;
         
         stopNumber = setInterval(() => {
             showNumber.innerHTML = num;
             num++;
         }, 1000);
     }, 100);
-
+    startFlag = 0;
+}
 }
 startBtn.addEventListener('click', displayNumber);
 
 
 const stopDisplayNumber = () => {
     clearInterval(stopNumber);
+    startFlag = 1;
 }
 stopBtn.addEventListener('click', stopDisplayNumber)
 
