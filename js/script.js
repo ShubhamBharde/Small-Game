@@ -7,19 +7,19 @@ let num;
 let startFlag = 1;
 
 const displayNumber = () => {
-    if(startFlag){
-    showNumber.innerHTML = 'Game is loading.. '; // html logic
+    if (startFlag) {
+        showNumber.innerHTML = 'Game is loading.. '; // html logic
 
-    num = 0;
-    setTimeout(() => {
-        
-        stopNumber = setInterval(() => {
-            showNumber.innerHTML = num;
-            num++;
-        }, 1000);
-    }, 100);
-    startFlag = 0;
-}
+        num = 0;
+        setTimeout(() => {
+
+            stopNumber = setInterval(() => {
+                showNumber.innerHTML = num;
+                num++;
+            }, 1000);
+        }, 100);
+        startFlag = 0;
+    }
 }
 startBtn.addEventListener('click', displayNumber);
 
@@ -55,14 +55,14 @@ function randomColor() {
     let color = '#';
     for (let i = 0; i < 6; i++) {
         // const element = hexColor[i];
-        color += hexColor[Math.trunc(Math.random()*16)];
+        color += hexColor[Math.trunc(Math.random() * 16)];
     }
     return color;
 }
 
 // continuos change background
-(function continuosChangeBgColor (){
-    setInterval(function(){ 
-       document.body.style.backgroundColor = randomColor()
+(function continuosChangeBgColor() {
+    setInterval(function () {
+        document.body.style.background = `linear-gradient(45deg, ${randomColor()}, ${randomColor()})`;
     }, 1000)
-}) ()
+})()
