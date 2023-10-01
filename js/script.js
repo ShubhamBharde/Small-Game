@@ -48,3 +48,21 @@ const displayResult = () => {
 }
 
 stopBtn.addEventListener('click', displayResult);
+
+// generate random color
+function randomColor() {
+    const hexColor = '0123456789abcdef';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        // const element = hexColor[i];
+        color += hexColor[Math.trunc(Math.random()*16)];
+    }
+    return color;
+}
+
+// continuos change background
+(function continuosChangeBgColor (){
+    setInterval(function(){ 
+       document.body.style.backgroundColor = randomColor()
+    }, 1000)
+}) ()
